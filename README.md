@@ -1,59 +1,65 @@
-# RetiroShalom
+# 🕊️ Landing Page - Retiro de Semana Santa (Comunidade Católica Shalom)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-## Development server
+## 🎯 Objetivo do Projeto
+Esta é uma Landing Page de alta conversão desenvolvida para a **Missão Palmas da Comunidade Católica Shalom**. O objetivo principal é centralizar as informações sobre o Retiro de Semana Santa 2026, oferecendo uma experiência visual imersiva e espiritual que conduz o usuário à inscrição oficial.
 
-To start a local development server, run:
+O projeto foi construído focando em **performance**, **acessibilidade** e **animações fluidas** para transmitir a identidade visual do evento.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠️ Stack Tecnológica
+* **Framework:** [Angular 19+](https://angular.io/) (Standalone Components).
+* **Estilização:** [Tailwind CSS v4](https://tailwindcss.com/) (Motor de alta performance).
+* **Animações:** [Angular Animations API](https://angular.io/guide/animations) (Triggers e Staggering).
+* **Gerenciamento de Build:** Vite (integrado ao Angular CLI).
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🏗️ Arquitetura e Funcionalidades
 
-```bash
-ng generate component component-name
-```
+### 1. Componentização
+O site foi dividido em componentes modulares para facilitar a manutenção:
+* `Hero`: Seção de impacto com overlay e call-to-action.
+* `About`: Conteúdo institucional com layout em grid responsivo.
+* `Moments`: Carrossel dinâmico utilizando `ngx-owl-carousel-o`.
+* `Info`: Dados geográficos integrados com Google Maps via Iframe.
+* `Registration`: Seção final focada em conversão (Link para Google Forms).
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 2. Animações e UX
+* **Staggering:** Efeito de "cascata" onde os elementos de uma seção aparecem sequencialmente.
+* **SSR Awareness:** Implementação de checagem de plataforma (`isPlatformBrowser`) para garantir compatibilidade com Server-Side Rendering.
 
-```bash
-ng generate --help
-```
+### 3. Design System
+* Paleta de cores baseada em tons terrosos (Terra, Copper, Brown, Beige).
+* Tipografia combinando a elegância da *Playfair Display* (Serif) com a legibilidade da *Montserrat* (Sans).
 
-## Building
+---
 
-To build the project run:
+## 🚀 Como Executar o Projeto
 
-```bash
-ng build
-```
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/danielmariae/retiro-semanasanta-shalompalmas.git
+    ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-## Running unit tests
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    ng serve
+    ```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+4.  **Acesse no navegador:**
+    `http://localhost:4200`
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📄 Licença
+Este projeto foi desenvolvido para fins acadêmicos e comunitários. Sinta-se à vontade para clonar e adaptar.
