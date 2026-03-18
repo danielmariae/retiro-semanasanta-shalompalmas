@@ -1,4 +1,4 @@
-<section [@staggerFade] class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+<section [@staggerFade] class="relative h-[90vh] md:h-screen flex items-center justify-center overflow-hidden">
   <div class="absolute inset-0 z-0">
     <img src="hero-bg.png" alt="Retiro de Semana Santa" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-brand-brown/60 backdrop-brightness-75"></div>
@@ -25,6 +25,13 @@
       <a href="#sobre" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/30 px-10 py-4 rounded-full font-bold text-lg transition-all">
         Saiba mais
       </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 opacity-50">
+    <span class="text-[10px] uppercase tracking-[0.3em] text-white font-sans">Scroll</span>
+    <div class="w-[26px] h-[45px] border-2 border-white rounded-full relative">
+      <div class="w-1 h-2 bg-white rounded-full absolute top-2 left-1/2 -translate-x-1/2 animate-pulse"></div>
     </div>
   </div>
 </section>
