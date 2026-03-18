@@ -60,6 +60,8 @@ O site foi dividido em componentes modulares para facilitar a manutenção:
     `http://localhost:4200`
 
 ---
+## ⚖️ Licenciamento
 
-## 📄 Licença
-Este projeto foi desenvolvido para fins acadêmicos e comunitários. Sinta-se à vontade para clonar e adaptar.
+Este projeto está sob a [Licença MIT](LICENSE). 
+
+**Nota sobre Ativos de Marca:** Os logotipos e a identidade visual da Comunidade Católica Shalom contidos neste repositório são de propriedade intelectual da instituição. O código-fonte é livre para estudo e adaptação, mas o uso da marca não está incluso nesta licença de software.
