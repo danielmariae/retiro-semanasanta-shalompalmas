@@ -1,8 +1,8 @@
 <header class="fixed top-0 w-full z-50 bg-brand-beige/90 backdrop-blur-md border-b border-brand-terra/10">
   <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
     <div class="flex items-center gap-2">
-      <div class="w-60 h-60 flex items-center justify-center">
-         <img src="LogoSemanaSanta.png" />        
+      <div class="w-32 md:w-48 flex items-center justify-center overflow-hidden">
+         <img src="LogoSemanaSanta.png" class="w-full h-auto" alt="Logo Semana Santa" />        
       </div>
     </div>
 
@@ -10,11 +10,35 @@
       <li><a href="#sobre" class="hover:text-brand-terra transition-colors">O que é</a></li>
       <li><a href="#momentos" class="hover:text-brand-terra transition-colors">Momentos</a></li>
       <li><a href="#informacoes" class="hover:text-brand-terra transition-colors">Informações</a></li>
+      <li>
+        <a href="#inscricao" 
+           class="bg-brand-terra hover:bg-brand-copper text-white px-6 py-2 rounded-full font-bold transition-all shadow-md">
+           Inscrever-se
+        </a>
+      </li>
     </ul>
 
-    <a href="#inscricao" 
-       class="bg-brand-terra hover:bg-brand-copper text-white px-6 py-2 rounded-full font-bold transition-all shadow-md hover:shadow-lg">
-      Inscrever-se
-    </a>
+    <button (click)="toggleMenu()" class="md:hidden text-brand-brown p-2 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 transition-transform duration-300" 
+           [class.rotate-180]="isMenuOpen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
   </nav>
+
+  <div [@mobileMenu]="menuState" 
+       class="md:hidden bg-brand-beige/95 backdrop-blur-sm border-b border-brand-terra/10 overflow-hidden">
+    <ul class="flex flex-col p-6 gap-3 font-sans font-semibold text-sm uppercase text-brand-brown">
+      <li><a href="#sobre" (click)="toggleMenu()" class="block py-2.5 hover:text-brand-terra">O que é</a></li>
+      <li><a href="#momentos" (click)="toggleMenu()" class="block py-2.5 hover:text-brand-terra">Momentos</a></li>
+      <li><a href="#informacoes" (click)="toggleMenu()" class="block py-2.5 hover:text-brand-terra">Informações</a></li>
+      <li>
+        <a href="#inscricao" (click)="toggleMenu()" 
+           class="block bg-brand-terra text-white text-center px-6 py-3.5 rounded-xl font-bold mt-2 shadow-md hover:bg-brand-copper transition-colors">
+           Inscrever-se
+        </a>
+      </li>
+    </ul>
+  </div>
 </header>

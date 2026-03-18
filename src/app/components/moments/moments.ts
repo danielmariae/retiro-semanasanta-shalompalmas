@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { staggerAnimation } from '../../shared/animations';
 
 @Component({
   selector: 'app-moments',
   standalone: true,
+  animations: [staggerAnimation], // <--- Importante aqui também
   imports: [CarouselModule], // Certifique-se de importar o módulo do carrossel aqui
   templateUrl: './moments.html'
 })
@@ -27,8 +29,8 @@ export class Moments {
 
   images = [
     { url: 'momento1.jpg', alt: 'Louvor' },
-    { url: 'momento2.jpg', alt: 'Adoração' },
-    { url: 'momento3.jpg', alt: 'Pregação' },
-    { url: 'momento4.jpg', alt: 'Comunhão' }
+    { url: 'momento2.jpg', alt: 'Alegria' },
+    { url: 'momento3.jpg', alt: 'Oração' },
+    { url: 'momento4.jpg', alt: 'Amor de Deus' }
   ];
 }
