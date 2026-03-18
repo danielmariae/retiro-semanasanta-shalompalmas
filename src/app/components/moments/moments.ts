@@ -31,6 +31,8 @@ export class Moments {
     { url: 'momento1.jpg', alt: 'Louvor' },
     { url: 'momento2.jpg', alt: 'Alegria' },
     { url: 'momento3.jpg', alt: 'Oração' },
-    { url: 'momento4.jpg', alt: 'Amor de Deus' }
+    { url: 'momento4.jpg', alt: 'Amor de Deus' },
+    { url: 'IMG_3208.jpeg', alt: 'Misericórdia' }
+
   ];
 }
