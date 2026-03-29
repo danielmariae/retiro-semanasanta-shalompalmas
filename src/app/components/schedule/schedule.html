@@ -1,0 +1,70 @@
+<section [@staggerFade] id="programacao" class="py-24 bg-brand-beige/50">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Cabeçalho -->
+    <div class="text-center mb-16">
+      <h2 class="text-brand-terra text-4xl md:text-5xl mb-4">Programação</h2>
+      <p class="text-brand-brown/70 font-sans text-lg">Conheça cada momento do nosso retiro espiritual</p>
+    </div>
+
+    <!-- Abas -->
+    <div class="flex gap-2 mb-12 overflow-x-auto">
+      @for (item of schedule; track item.date; let i = $index) {
+        <button
+          (click)="selectTab(i)"
+          [class.active]="activeTab === i"
+          class="px-6 py-3 font-sans font-semibold whitespace-nowrap transition-all duration-300 border-b-2"
+          [ngClass]="{
+            'border-brand-terra text-brand-terra': activeTab === i,
+            'border-transparent text-brand-brown/60 hover:text-brand-brown': activeTab !== i
+          }"
+        >
+          <span class="block text-sm uppercase tracking-widest">{{ item.day }}</span>
+          <span class="text-xs text-brand-copper/80">{{ item.date }}</span>
+        </button>
+      }
+    </div>
+
+    <!-- Conteúdo das Abas -->
+    <div [@staggerFade]>
+      @for (item of schedule; track item.date; let i = $index) {
+        @if (activeTab === i) {
+          <div class="space-y-4 animate-fadeIn">
+            @for (activity of item.activities; track activity.time) {
+              <div class="flex items-start gap-6 p-5 rounded-xl bg-brand-beige/50 border-l-4 border-brand-terra hover:bg-brand-beige/80 transition-colors duration-300">
+                <!-- Horário -->
+                <div class="flex-shrink-0 min-w-24">
+                  <span class="text-brand-terra font-serif text-xl font-bold">{{ activity.time }}</span>
+                </div>
+
+                <!-- Atividade -->
+                <div class="flex-grow">
+                  <p class="text-brand-brown font-sans text-lg font-semibold">{{ activity.activity }}</p>
+                </div>
+
+                <!-- Ícone decorativo -->
+                <div class="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-brand-copper"></div>
+              </div>
+            }
+          </div>
+        }
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  :host ::ng-deep .animate-fadeIn {
+    animation: fadeIn 0.4s ease-out;
+  }
+</style>
